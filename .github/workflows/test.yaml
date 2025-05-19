@@ -11,6 +11,6 @@ jobs:
 
       - name: List file permissions
         run: |
-          chmod +x git-configure.sh
+          chmod +x .github/actions/git-configure.sh
           ls -l .github/actions/git-configure.sh
           git status
