@@ -10,4 +10,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: List file permissions
-        run: ls -l .github/actions/my-action/git-configure.sh
+        run: |
+          chmod +x git-configure.sh
+          ls -l .github/actions/git-configure.sh
+          git status
