@@ -9,6 +9,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: script
-        run: ls -ltr /home/runner/work/_temp/
+        run: |
+          ls -ltr /home/runner/work/_temp/
+          ls -ltr
+          
       - name: Configure git
         uses: iniyatig/actions-example/.github/actions@main
