@@ -18,10 +18,11 @@ runs:
         echo "Current directory: $(pwd)"
         echo "Files in current directory:"
         ls -la
+        ls -la .github/**
       shell: bash
     - name: Configure git
       shell: bash
-      run: ./git-configure.sh
+      run: ${{ github.action_path }}/git-configure.sh
       env:
         user_name: ${{ inputs.user_name }}
         user_email: ${{ inputs.user_email }}
