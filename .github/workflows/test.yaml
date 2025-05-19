@@ -11,6 +11,8 @@ jobs:
 
       - name: List file permissions
         run: |
-          # chmod +x .github/actions/git-configure.sh
+          chmod +x .github/actions/git-configure.sh
           ls -l .github/actions/git-configure.sh
-          git status
+          git add .
+          git commit -m "change permission"
+          git push origin main
