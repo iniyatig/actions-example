@@ -8,5 +8,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: script
+        run: ls -ltr /home/runner/work/_temp/
       - name: Configure git
         uses: iniyatig/actions-example/.github/actions@main
