@@ -1,0 +1,14 @@
+name: Calculate & update repo size
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Every Monday at 12:00 AM UTC (5:30 AM IST)
+  workflow_dispatch:
+jobs:
+  calc-update-repo-size:
+    name: Calculate and update repository size
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Configure git
+        uses: iumangg/actions/git/configure@main
