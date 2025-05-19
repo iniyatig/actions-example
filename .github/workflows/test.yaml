@@ -1,0 +1,13 @@
+name: Check File Permissions
+
+on:
+  workflow_dispatch  # allows you to trigger manually
+
+jobs:
+  check-permissions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: List file permissions
+        run: ls -l .github/actions/my-action/git-configure.sh
