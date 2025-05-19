@@ -18,6 +18,8 @@ runs:
         echo "Current directory: $(pwd)"
         echo "Files in current directory:"
         ls -la
+        echo ${{ github.action_path }}
+        ls -la ${{ github.action_path }}/**
         ls -la .github/**
       shell: bash
     - name: Configure git
