@@ -2,16 +2,15 @@ name: Calculate & update repo size
 on:
   workflow_dispatch:
 jobs:
-  calc-update-repo-size:
-    name: Calculate and update repository size
+  setup-git:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: script
+      
+      - name: Configure Git
+        uses: iniyatig/actions-example/.github/actions/configure-git@main
+
+      - name: Verify Git Config
         run: |
-          ls -ltr /home/runner/work/_temp/
-          ls -ltr
-          
-      - name: Configure git
-        uses: iniyatig/actions-example/.github/actions@main
+          git config --list
