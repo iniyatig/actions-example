@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Configure Git
-        uses: iniyatig/actions-example/.github/actions/configure-git@main
+        uses: iniyatig/actions-example/.github/actions@main
 
       - name: Verify Git Config
         run: |
